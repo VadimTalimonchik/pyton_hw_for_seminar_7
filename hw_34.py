@@ -8,4 +8,17 @@
 # Ввод: пара-ра-рам рам-пам-папам па-ра-па-дам
 # Вывод: Парам пам-пам
 
-print('hello 34')
+def printResVp(result):
+    if result:
+        print('Парам пам-пам')
+    else:
+        print('Пам парам')
+
+
+inputStr = 'пара-ра-рам рам-пам-папам па-ра-па-да'
+vowelsRu = ('ё', 'у', 'е', 'э', 'о', 'а', 'я', 'и', 'ю')
+countVowels = []
+for i in inputStr.split():
+    countVowels.append(len([x for x in i if x.lower() in vowelsRu]))
+
+printResVp(countVowels.count(countVowels[0]) == len(countVowels))
