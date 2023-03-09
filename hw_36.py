@@ -13,4 +13,13 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-print('hello 36')
+def printTable(operation, numRows = 5, numColumns = 5):
+    space = "   "
+    print(space.join([str(i) for i in range(1, numColumns + 1)]))
+    for i in range(2, numRows + 1):
+        print(i, end = space)
+        for j in range(2, numColumns + 1):
+            print(operation(i, j), end = space)
+        print()
+
+printTable(lambda x, y: x * y)
